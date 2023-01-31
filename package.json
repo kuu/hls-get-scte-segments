@@ -1,0 +1,32 @@
+{
+  "name": "hls-get-scte-segments",
+  "version": "0.0.1",
+  "description": "Utility for parsing .m3u8 and extract information about CUE-OUT/CUE-IN segments",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "xo",
+    "test": "npm run lint && ava"
+  },
+  "keywords": ["HLS", "SCTE-35"],
+  "author": "Kuu Miyazaki",
+  "license": "MIT",
+  "dependencies": {
+    "hls-parser": "^0.10.6",
+    "node-fetch": "^3.3.0"
+  },
+  "devDependencies": {
+    "ava": "^5.1.1",
+    "xo": "^0.53.1"
+  },
+  "xo": {
+    "esnext": true,
+    "space": true,
+    "rules": {
+      "ava/no-import-test-files": 0,
+      "capitalized-comments": 0,
+      "indent": 2,
+      "no-new": 0
+    } 
+  }
+}
