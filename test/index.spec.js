@@ -6,7 +6,7 @@ import {
   patternC1, patternC2, patternC3,
   patternD1, patternD2, patternD3,
   patternE,
-} from './fixture.js';
+} from './helpers/fixture.js';
 
 test('dateRangeA1-0', t => {
   const entries = getSegments(patternA1, {adjacentSegments: 0});
