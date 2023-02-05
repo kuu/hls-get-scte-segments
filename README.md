@@ -1,5 +1,13 @@
+[![Build Status](https://img.shields.io/github/workflow/status/kuu/hls-get-scte-segments/HLS%20get%20SCTE%20segments%20tests)](https://github.com/kuu/hls-get-scte-segments/actions/workflows/tests.yml)
+[![Known Vulnerabilities](https://snyk.io/test/github/kuu/hls-get-scte-segments/badge.svg)](https://snyk.io/test/github/kuu/hls-get-scte-segments)
+[![npm Downloads](https://img.shields.io/npm/dw/hls-get-scte-segments.svg?style=flat-square)](https://npmjs.com/hls-get-scte-segments)
+[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
+
 # hls-get-scte-segments
 Utility for parsing .m3u8 and extract information about CUE-OUT/CUE-IN segments
+
+## Install
+[![NPM](https://nodei.co/npm/hls-get-scte-segments.png?mini=true)](https://nodei.co/npm/hls-get-scte-segments/)
 
 ## Usage
 ### For the manifests where a SCTE35 message is expressed as EXT-X-DATERANGE tags
@@ -177,6 +185,13 @@ Extracts CUE-OUT/CUE-IN segments from playlist
 | Name     | Type   | Required | Default | Description   |
 | -------- | ------ | -------- | ------- | ------------- |
 | playlist | string | Yes      | N/A     | A text data of an [HLS media playlist](https://datatracker.ietf.org/doc/html/draft-pantos-hls-rfc8216bis#section-4.1) |
+| options  | object | No       | {hollow: true, adjacentSegments: 0} | An object holding option values to override the default behavior.  |
+
+##### supported options
+| Name       | Type    | Default | Description   |
+| ---------- | ------- | ------- | ------------- |
+| `hollow` | boolean | true   | If true, the function only returns CUE-OUT and CUE-IN segments (defalut behavior). If false, the in-between ad segments will be included.|
+| `adjacentSegments` | number | 0   | If specified, the return value includes adjacent segments (N-segments before and after the CUE-OUT/IN segments.)|
 
 #### return value
 An array of instances of `Segment` (See [hls-parser](https://github.com/kuu/hls-parser/blob/master/README.md#data-format))
