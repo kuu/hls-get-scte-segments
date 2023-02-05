@@ -59,7 +59,7 @@ for (const segment of scteSegments) {
 const scteSegments = getScteSegments(playlistText, {adjacentSegments: 1});
 
 for (const segment of scteSegments) {
-  console.log(`${getPrefix(segment)}${segment.uri}`);
+  console.log(`${getSuffix(segment)}${segment.uri}`);
 }
 // manifest_1_103090.ts 
 // manifest_1_103091.ts => CUE-OUT
@@ -72,7 +72,7 @@ for (const segment of scteSegments) {
 const scteSegments = getScteSegments(playlistText, {hollow: false});
 
 for (const segment of scteSegments) {
-  console.log(`${getPrefix(segment)}${segment.uri}`);
+  console.log(`${getSuffix(segment)}${segment.uri}`);
 }
 // manifest_1_103091.ts => CUE-OUT
 // manifest_1_103092.ts
@@ -142,7 +142,7 @@ for (const segment of scteSegments) {
 const scteSegments = getScteSegments(playlistText, {adjacentSegments: 1});
 
 for (const segment of scteSegments) {
-  console.log(`${getPrefix(segment)}${segment.uri}`);
+  console.log(`${getSuffix(segment)}${segment.uri}`);
 }
 // manifest_1_103090.ts 
 // manifest_1_103091.ts => CUE-OUT duration=22.087
@@ -155,7 +155,7 @@ for (const segment of scteSegments) {
 const scteSegments = getScteSegments(playlistText, {hollow: false});
 
 for (const segment of scteSegments) {
-  console.log(`${getPrefix(segment)}${segment.uri}`);
+  console.log(`${getSuffix(segment)}${segment.uri}`);
 }
 // manifest_1_103091.ts => CUE-OUT duration=22.087
 // manifest_1_103092.ts
@@ -166,9 +166,9 @@ for (const segment of scteSegments) {
 function getSuffix({markers}) {
   for (const marker of markers) {
     if (marker.type === 'OUT') {
-      return `CUE-OUT duration=${marker.duration}`;
+      return ` => CUE-OUT duration=${marker.duration}`;
     } else if (marker.type === 'IN') {
-      return 'CUE-IN';
+      return ' => CUE-IN';
     }
   }
   return '';
