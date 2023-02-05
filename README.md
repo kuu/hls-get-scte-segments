@@ -49,7 +49,7 @@ const scteSegments = getScteSegments(playlistText);
 // List the URLs of CUE-OUT/CUE-IN segments
 for (const segment of scteSegments) {
   // segment is a Segment object parsed by hls-parser (See https://github.com/kuu/hls-parser)
-  console.log(`${getSuffix(segment)}${segment.uri}`);
+  console.log(`${segment.uri}${getSuffix(segment)}`);
 }
 // manifest_1_103091.ts => CUE-OUT
 // manifest_1_103095.ts => CUE-IN
@@ -72,7 +72,7 @@ for (const segment of scteSegments) {
 const scteSegments = getScteSegments(playlistText, {hollow: false});
 
 for (const segment of scteSegments) {
-  console.log(`${getSuffix(segment)}${segment.uri}`);
+  console.log(`${segment.uri}${getSuffix(segment)}`);
 }
 // manifest_1_103091.ts => CUE-OUT
 // manifest_1_103092.ts
@@ -132,7 +132,7 @@ const scteSegments = getScteSegments(playlistText);
 // List the URLs of CUE-OUT/CUE-IN segments
 for (const segment of scteSegments) {
   // segment is a Segment object parsed by hls-parser (See https://github.com/kuu/hls-parser)
-  console.log(`${getSuffix(segment)}${segment.uri}`);
+  console.log(`${segment.uri}${getSuffix(segment)}`);
 }
 // manifest_1_103091.ts => CUE-OUT
 // manifest_1_103095.ts => CUE-IN
@@ -142,7 +142,7 @@ for (const segment of scteSegments) {
 const scteSegments = getScteSegments(playlistText, {adjacentSegments: 1});
 
 for (const segment of scteSegments) {
-  console.log(`${getSuffix(segment)}${segment.uri}`);
+  console.log(`${segment.uri}${getSuffix(segment)}`);
 }
 // manifest_1_103090.ts 
 // manifest_1_103091.ts => CUE-OUT duration=22.087
