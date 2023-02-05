@@ -1,6 +1,6 @@
 {
   "name": "hls-get-scte-segments",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Utility for parsing .m3u8 and extract information about CUE-OUT/CUE-IN segments",
   "main": "index.js",
   "type": "module",
