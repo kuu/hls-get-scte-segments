@@ -1,14 +1,18 @@
 import HLS from 'hls-parser';
 
+function extractMarkers(segments) {
+  return segments.filter(segment => segment.markers.length > 0);
+}
+
 function extractSegments(segments, start, end, cueOut, hollow, adjacentSegments) {
   if (!cueOut) {
     if (end === segments.length) {
-      // No ad markers found
+      // No CUE-IN/CUE-OUT found
       if (hollow) {
         return [];
       }
 
-      return segments.slice(start, end);
+      return extractMarkers(segments.slice(start, end));
     }
 
     // Only CUE-IN found
