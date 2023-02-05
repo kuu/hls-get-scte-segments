@@ -15,8 +15,7 @@
   "author": "Kuu Miyazaki",
   "license": "MIT",
   "dependencies": {
-    "hls-parser": "^0.10.6",
-    "node-fetch": "^3.3.0"
+    "hls-parser": "^0.10.6"
   },
   "devDependencies": {
     "ava": "^5.1.1",
