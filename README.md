@@ -59,7 +59,7 @@ for (const segment of scteSegments) {
 const scteSegments = getScteSegments(playlistText, {adjacentSegments: 1});
 
 for (const segment of scteSegments) {
-  console.log(`${getSuffix(segment)}${segment.uri}`);
+  console.log(`${segment.uri}${getSuffix(segment)}`);
 }
 // manifest_1_103090.ts 
 // manifest_1_103091.ts => CUE-OUT
@@ -155,7 +155,7 @@ for (const segment of scteSegments) {
 const scteSegments = getScteSegments(playlistText, {hollow: false});
 
 for (const segment of scteSegments) {
-  console.log(`${getSuffix(segment)}${segment.uri}`);
+  console.log(`${segment.uri}${getSuffix(segment)}`);
 }
 // manifest_1_103091.ts => CUE-OUT duration=22.087
 // manifest_1_103092.ts
