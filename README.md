@@ -1,4 +1,4 @@
-[![Build Status](https://img.shields.io/github/workflow/status/kuu/hls-get-scte-segments/HLS%20get%20SCTE%20segments%20tests)](https://github.com/kuu/hls-get-scte-segments/actions/workflows/tests.yml)
+[![hls-get-scte-segments tests](https://github.com/kuu/hls-get-scte-segments/actions/workflows/tests.yml/badge.svg)](https://github.com/kuu/hls-get-scte-segments/actions/workflows/tests.yml)
 [![Known Vulnerabilities](https://snyk.io/test/github/kuu/hls-get-scte-segments/badge.svg)](https://snyk.io/test/github/kuu/hls-get-scte-segments)
 [![npm Downloads](https://img.shields.io/npm/dw/hls-get-scte-segments.svg?style=flat-square)](https://npmjs.com/hls-get-scte-segments)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
